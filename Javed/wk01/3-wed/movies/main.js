@@ -5,8 +5,14 @@ var film = {
 }
 
 function describeFilm() {
-  console.log(film.title + ' lasts for ' +
-    film.duration + ' minutes. Stars: ' + film.stars.join(', '));
+  return film.title + ' lasts for ' +
+    film.duration + ' minutes. Stars: ' + film.stars.join(', ');
 }
 
-describeFilm();
+console.log(describeFilm());
+
+var replaceMe = /!/gi;
+
+function calmYourself(string) {
+  return string.toLowerCase().replace(replaceMe,'');
+}
