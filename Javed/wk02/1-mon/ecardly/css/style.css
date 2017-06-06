@@ -5,14 +5,6 @@ html, body, header, head, nav, div, article {
   font-family: 'Lato', sans-serif;
 }
 
-
-/** {
-  margin: 0 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-}*/
-
 .headrear {
   background-image: url('file:///Users/kudzu/wdi/code_alongs/02-html-css/ecardly/images/background.jpg');
   background-repeat: repeat round;
@@ -29,13 +21,14 @@ html, body, header, head, nav, div, article {
   width: 140px;
 }
 
+
 body {
   background-color: #d6d6d6;
 }
 
 .content {
   margin: auto;
-  width: 90%;
+  width: 96%;
   padding: 0px;
   display: block;
   text-align: center;
@@ -106,3 +99,22 @@ span {
   text-decoration: line-through;
   color: black;
 }
+
+/* OVERFLOW H4CK - DON'T NEED TO CLEARFIX!!
+.content {
+  overflow: hidden;
+  text-align: center;
+}
+
+.posts {
+  float: left;
+  text-align: left;
+  width: 60%;
+}
+
+.navigation {
+  float: left;
+  text-align: left;
+  width: 20%;
+}
+*/
