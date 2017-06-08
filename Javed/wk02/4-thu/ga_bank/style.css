@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700');
+
+* {
+  margin: 0 0;
+  /*padding: 0;*/
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #eaecef;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  margin-top: 5em;
+  text-align: left;
+  padding: 5px;
+}
+
+.logo {
+  width: 15%;
+  max-width: 9em;
+  display: inline-block;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.title {
+  display: inline-block;
+  text-align: center;
+}
+
+.titleblock {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+.lbox, .rbox {
+  display: inline-block;
+  vertical-align: top;
+  background-color: lightgrey;
+  padding: 20px;
+  margin: 40px;
+  min-width: 15em;
+  border-radius: 9px;
+}
+
+input {
+  border: 0;
+  padding: 5px;
+  text-align: left;
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0.3em 0;
+}
+
+button {
+  display: inline-block;
+  margin: 10px auto;
+  border: 0;
+  padding: 3px 0 5px 0;
+  background-color: lightblue;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.1em;
+  width: 49%;
+}
+
+button:hover {
+  background-color: skyblue;
+}
+
+button:focus, input:focus {
+  outline: 0;
+}
+
+h1 {
+  vertical-align: middle;
+  text-align: center;
+  /*margin: 100px 0;*/
+}
+
+h2 {
+  margin: 0.5em 0;
+  color: #444444;
+  display: inline;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 0.2em 0;
+  font-size: 1.6em;
+}
