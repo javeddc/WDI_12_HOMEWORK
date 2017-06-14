@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Guess the vegetable!</h1>
+  </header>
+
+
+  <div class="container">
+
+    <aside class="scoreboard">
+      <div class="scoreItem">
+        <h3>Letters guessed:</h3>
+        <h3 id=lettersGuessed>.</h3>
+      </div>
+      <div class="scoreItem">
+        <h3>Guesses Remaining:</h3>
+        <h3 id="guessesRemaining">_</h3>
+      </div>
+      <div class="scoreItem">
+        <h3>Total score:</h3>
+        <h3 id="totalScore">_</h3>
+      </div>
+    </aside>
+
+
+    <main class="gameboard">
+      <div id="letterArea">
+
+      </div>
+
+      <div id="letterInput">
+        <div class="letterRow">
+          <h4>A</h4>
+          <h4>B</h4>
+          <h4>C</h4>
+          <h4>D</h4>
+          <h4>E</h4>
+          <h4>F</h4>
+          <h4>G</h4>
+          <h4>H</h4>
+          <h4>I</h4>
+          <h4>J</h4>
+          <h4>K</h4>
+          <h4>L</h4>
+          <h4>M</h4>
+        </div>
+
+        <div class="letterRow">
+          <h4>N</h4>
+          <h4>O</h4>
+          <h4>P</h4>
+          <h4>Q</h4>
+          <h4>R</h4>
+          <h4>S</h4>
+          <h4>T</h4>
+          <h4>U</h4>
+          <h4>V</h4>
+          <h4>W</h4>
+          <h4>X</h4>
+          <h4>Y</h4>
+          <h4>Z</h4>
+        </div>
+
+      </div>
+
+      <div class="guessBox">
+        <input id="wordGuess" type="text" name="" value="">
+        <button id="wordGuessBtn" type="button" name="button">GUESS</button>
+        <div id="incorrectGuesses">
+
+        </div>
+      </div>
+
+      <div class="newWord">
+          <button id="newWord" type="button" name="button">NEW WORD</button>
+      </div>
+
+    </main>
+
+
+  </div>
+
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
