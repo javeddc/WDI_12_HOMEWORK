@@ -542,10 +542,18 @@ html {
 
 .container {
   margin-top: 4em;
+  width: 100%;
+}
+
+.info {
+  width: 80%;
+  font-size: 1.8em;
+  margin: auto;
 }
 
 #alerts {
   margin-bottom: 4em;
+  margin-top: 2em;
   font-size: 1.3em;
 }
 
@@ -555,6 +563,11 @@ html {
 
 .winnerText {
   color: lime;
+  font-weight: 600;
+}
+
+.tieText {
+  color: orange;
   font-weight: 600;
 }
 
@@ -570,6 +583,14 @@ html {
   font-size: 0.9em;
   background-color: #666666;
   visibility: hidden;
+}
+
+#newChars {
+  margin-top: 5em;
+  border-color: orange;
+  color: orange;
+  font-size: 0.9em;
+  background-color: #666666;
 }
 
 .gridRow {
