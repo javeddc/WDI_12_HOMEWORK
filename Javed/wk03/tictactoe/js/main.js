@@ -168,10 +168,56 @@ var gameInit = function() {
           game.winner();
         }
         testArray = []
+        // check diagonals 2
 
       }
 
       ,
+    checkdiags: function(board) {
+      // var teep = [['a','b','c'],['d','e','f'],['g','h','i']]
+
+      for (var i = 0; i < dimension; i++) {
+        testArray = []
+        for (var j = 0; j <= i ; j++) {
+          var x = i - j;
+          testArray.push(board[x][j]);
+          // console.log(testArray);
+          // if(game.checkArray(testArray)) {game.winner()}
+        }
+        console.log(testArray);
+      }
+      for (var i = dimension - 2; i >= 0; i--) {
+        testArray = []
+        for (var j = 0; j <= i ; j++) {
+          var x = i - j;
+          testArray.push(board[dimension - j -1][dimension - x -1]);
+          // console.log(testArray);
+          // if(game.checkArray(testArray)) {game.winner()}
+        }
+        console.log(testArray);
+      }
+      for (var i = dimension -1; i >= 0; i--) {
+        testArray = []
+        for (var j = i; j >= 0 ; j--) {
+          var x = i - j;
+          testArray.push(board[x][j]);
+          // console.log(testArray);
+          // if(game.checkArray(testArray)) {game.winner()}
+        }
+        console.log(testArray);
+      }
+      for (var i = dimension - 2; i >= 0; i--) {
+        testArray = []
+        for (var j = 0; j <= i ; j++) {
+          var x = i - j;
+          testArray.push(board[dimension - j -1][dimension - x -1]);
+          // console.log(testArray);
+          // if(game.checkArray(testArray)) {game.winner()}
+        }
+        console.log(testArray);
+      }
+
+    },
     winner: function() {
       alerts.textContent = "WE HAVE A WINNER";
       alerts.classList.toggle('winnerText');
