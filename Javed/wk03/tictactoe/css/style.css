@@ -609,8 +609,8 @@ html {
 
 .gridCell {
   /*background-color: red;*/
-  width: 10em;
-  height: 10em;
+  width: 9em;
+  height: 9em;
   display: inline-block;
   margin: 0 0;
   border: 0;

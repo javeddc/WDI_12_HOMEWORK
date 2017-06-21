@@ -9,6 +9,17 @@ var newCharsBtn = document.getElementById('newChars')
 var p1score = document.getElementById('player1score');
 var p2score = document.getElementById('player2score');
 
+
+
+var teep = [
+  ['a', 'b', 'c'],
+  ['d', 'e', 'f'],
+  ['g', 'h', 'i']
+]
+
+
+
+
 var gameInit = function() {
   var board = []
   var players = []
@@ -61,6 +72,9 @@ var gameInit = function() {
           board[i].push(0)
         }
       }
+    },
+    getBoard: function() {
+      return board
     },
     newChars: function() {
       players = [];
@@ -153,22 +167,62 @@ var gameInit = function() {
           testArray = []
         }
         // check diagonals
-        for (var i = 0; i < dimension; i++) {
-          testArray.push(board[i][i]);
-        }
-        if (game.checkArray(testArray)) {
-          game.winner();
-        }
-        testArray = []
+        // for (var i = 0; i < dimension; i++) {
+        //   testArray.push(board[i][i]);
+        // }
+        // if (game.checkArray(testArray)) {
+        //   game.winner();
+        // }
+        // testArray = []
+        //
+        // for (var i = 0; i < dimension; i++) {
+        //   testArray.push(board[dimension - i - 1][i]);
+        // }
+        // if (game.checkArray(testArray)) {
+        //   game.winner();
+        // }
+        // testArray = []
+        // check diagonals 2
 
         for (var i = 0; i < dimension; i++) {
-          testArray.push(board[dimension - i - 1][i]);
+          testArray = []
+          for (var j = 0; j <= i; j++) {
+            var x = i - j;
+            testArray.push(board[x][j]);
+            // console.log(testArray);
+            if(game.checkArray(testArray)) {game.winner()}
+          }
+          console.log(testArray);
         }
-        if (game.checkArray(testArray)) {
-          game.winner();
+        for (var i = dimension - 2; i >= 0; i--) {
+          testArray = []
+          for (var j = 0; j <= i; j++) {
+            var x = i - j;
+            testArray.push(board[dimension - j - 1][dimension - x - 1]);
+            // console.log(testArray);
+            if(game.checkArray(testArray)) {game.winner()}
+          }
+          console.log(testArray);
         }
-        testArray = []
-        // check diagonals 2
+        for (var i = dimension - 1; i >= 0; i--) {
+          testArray = []
+          for (var j = 0; j < dimension - i; j++) {
+            testArray.push(board[i + j][j]);
+            // console.log(testArray);
+            if(game.checkArray(testArray)) {game.winner()}
+          }
+          console.log(testArray);
+        }
+        for (var i = dimension - 2; i >= 0; i--) {
+          testArray = []
+          for (var j = i; j >= 0; j--) {
+            x = i-j;
+            console.log(x);
+            testArray.push(board[x][dimension - j -1]);
+            if(game.checkArray(testArray)) {game.winner()}
+          }
+          console.log(testArray);
+        }
 
       }
 
@@ -178,7 +232,7 @@ var gameInit = function() {
 
       for (var i = 0; i < dimension; i++) {
         testArray = []
-        for (var j = 0; j <= i ; j++) {
+        for (var j = 0; j <= i; j++) {
           var x = i - j;
           testArray.push(board[x][j]);
           // console.log(testArray);
@@ -188,19 +242,18 @@ var gameInit = function() {
       }
       for (var i = dimension - 2; i >= 0; i--) {
         testArray = []
-        for (var j = 0; j <= i ; j++) {
+        for (var j = 0; j <= i; j++) {
           var x = i - j;
-          testArray.push(board[dimension - j -1][dimension - x -1]);
+          testArray.push(board[dimension - j - 1][dimension - x - 1]);
           // console.log(testArray);
           // if(game.checkArray(testArray)) {game.winner()}
         }
         console.log(testArray);
       }
-      for (var i = dimension -1; i >= 0; i--) {
+      for (var i = dimension - 1; i >= 0; i--) {
         testArray = []
-        for (var j = i; j >= 0 ; j--) {
-          var x = i - j;
-          testArray.push(board[x][j]);
+        for (var j = 0; j < dimension - i; j++) {
+          testArray.push(board[i + j][j]);
           // console.log(testArray);
           // if(game.checkArray(testArray)) {game.winner()}
         }
@@ -208,14 +261,17 @@ var gameInit = function() {
       }
       for (var i = dimension - 2; i >= 0; i--) {
         testArray = []
-        for (var j = 0; j <= i ; j++) {
-          var x = i - j;
-          testArray.push(board[dimension - j -1][dimension - x -1]);
-          // console.log(testArray);
-          // if(game.checkArray(testArray)) {game.winner()}
+        for (var j = i; j >= 0; j--) {
+          x = i-j;
+          console.log(x);
+          testArray.push(board[x][dimension - j -1]);
         }
         console.log(testArray);
       }
+      // [['a','b','c','d'],
+      // ['e','f','g','h'],
+      // ['i','j','k','l'],
+      // ['m','n','o','p']]
 
     },
     winner: function() {
