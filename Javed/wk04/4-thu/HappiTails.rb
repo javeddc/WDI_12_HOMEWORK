@@ -91,6 +91,9 @@ class Shelter
         result.push pet
       end
     end
+    @no_human.each do |animal|
+      result.push animal
+    end
     return result
   end
 
@@ -177,7 +180,7 @@ def menu
 
   puts "Welcome to HappiTails animal shelter. Menu options are below. Enter the number corresponding to the menu option."
   puts ''
-  puts "Display all animals - 1"
+  puts "Display all client & shelter animals - 1"
   puts "Display all clients - 2"
   puts "Add an animal to the shelter – 3"
   puts "Add a new client – 4"
@@ -227,6 +230,7 @@ def menu
       toy_input.split(',').each {|toy| toys.push toy}
     end
     HappiTails.add_to_shelter Animal.new(name, age, gender, species, toys)
+    binding.pry
     return_key
 
   when '4'
