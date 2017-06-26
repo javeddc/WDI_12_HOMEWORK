@@ -1,0 +1,34 @@
+
+
+<form class="" action="/result/" method="get">
+  <input type="text" name="query" value="<%=  %>">
+  <button type="submit">GO</button>
+</form>
+
+<div class="detail">
+  <div style="background-image: url('<%= @movie['Poster'] %>')" class="detail_poster_img"></div>
+  <div class="detail_text">
+    <div class="cont">
+      <h5 class="detail_title"><%= @movie['Title'] %></h5>
+      <p class="detail_p"><strong>Year: </strong><%= @movie['Year'] %></p>
+      <p class="detail_p">
+        <strong>Director:
+        </strong><%= @movie['Director'] %></p>
+      <p class="detail_p">
+        <strong>Cast:
+        </strong><%= @movie['Actors'] %></p>
+      <p class="detail_p">
+        <strong>Plot Summary:
+        </strong><%= @movie['Plot'] %></p>
+      <p class="detail_p">
+        <strong>Language:
+        </strong><%= @movie['Language'] %></p>
+      <p class="detail_p">
+        <strong>Country:
+        </strong><%= @movie['Country'] %></p>
+      <p class="detail_p">
+        <strong>Writer:
+        </strong><%= @movie['Writer'] %></p>
+    </div>
+  </div>
+</div>

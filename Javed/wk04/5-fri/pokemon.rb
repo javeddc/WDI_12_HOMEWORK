@@ -72,8 +72,9 @@ puts "#{peter.join(", \n")}"
 
 
 
-
-
+# TERNARY OPERATORS: another way to do if statements
+winner = rand(0..1) == 0 ? 'alfred' : 'peter'
+puts "another winner is #{winner}"
 
 
 
