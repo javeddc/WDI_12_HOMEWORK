@@ -3,6 +3,12 @@ require 'sinatra/reloader'
 require 'pry'
 require 'httparty'
 
+# File.wr
+
+def store_search
+
+end
+
 
 get '/' do
   erb :index
@@ -20,6 +26,7 @@ get '/result/' do
     @movie = HTTParty.get("http://www.omdbapi.com/?i=#{@results[0]['imdbID']}&apikey=2f6435d9").parsed_response
     return erb :detail
   end
+  # store_search @query
   erb :result
 end
 
