@@ -2,7 +2,7 @@
 
 ```javascript
 ANSWER:
-$('div h1')
+$('ul h1')
 ```
 
 (2.) How would you change the contents of the element to be 'Friend'?
