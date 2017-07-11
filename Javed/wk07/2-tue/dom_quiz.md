@@ -21,7 +21,7 @@ $('ul h1')
 
 ```javascript
 ANSWER:
-$('ul h1').replaceWith('<h1>f<h1>')
+$('ul h1').replaceWith('<h1>Friend<h1>')
 ```
 
 (3.) How would you add an event listener to the button element inside the div, so that when it is clicked the background colour of the div changes to red?

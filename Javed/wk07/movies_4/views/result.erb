@@ -1,0 +1,21 @@
+<form class="" action="/result/" method="get">
+  <input type="text" name="query" value="<%= @query %>">
+  <button type="submit">GO</button>
+</form>
+
+<div class="results">
+
+  <% @results.each do |result| %>
+  <a href="/detail/?id=<%= result['imdbID'] %>">
+    <div style="background-image: url('<%= result['Poster'] %>')" class="poster_img">
+      <% title = result['Title']
+      if title.length > 16
+        title = title[0..16] + '. . .'
+      end %>
+      <h5 class="result_title"><%= title %></h5>
+      <h5 class="result_year"><%= result['Year'] %></h5>
+    </div>
+  </a>
+  <% end %>
+
+</div>
