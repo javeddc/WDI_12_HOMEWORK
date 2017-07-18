@@ -1,0 +1,12 @@
+<% if @guess == '7' %>
+<h3><%= "YOU WIN" %></h3>
+<% else %>
+<h3><%= "GUESS AGAIN" %></h3>
+
+<% (1..10).to_a.each do |num| %>
+
+<a href="/?guess=<%= num %>"><%= num %></h4></a>
+
+<% end %>
+
+<% end %>
