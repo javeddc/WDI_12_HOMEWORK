@@ -1,0 +1,48 @@
+<p>Title:
+  <%= @article.title %></p>
+
+<p>Content:
+  <%= @article.content %></p>
+
+<p>Category:
+  <%= @article.category.name %></p>
+
+<!-- <p>Historgram:
+  <%= @article.process_article %></p> -->
+
+<div class="" style="width: 400px;">
+  <canvas id="chart"></canvas>
+</div>
+
+<div id="comments"></div>
+<button onclick="loadComments()">Load Comments</button>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="http://underscorejs.org/underscore-min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+
+<script type="text/javascript">
+  var ctx = document.getElementById('chart').getContext('2d');
+
+  $.ajax({url: '/api/articles/<%= @article.id %>'}).done(function (res) {
+    new Chart(ctx, {
+      data: res,
+      type: 'polarArea'
+    })
+  })
+
+  var commentDiv = document.getElementById('comments')
+
+  var loadComments = function () {
+    $.ajax({url: '/api/comments/<%= @article.id %>'}).done(function (res) {
+      _.each(res, function (comment) {
+        console.log(comment.content);
+        var para = document.createElement('P');
+        para.textContent = "COMMENT: " + comment.content;
+        $('#comments').append(para);
+      })
+    })
+  }
+</script>
